@@ -187,7 +187,32 @@ $('#basics').DataTable();
   $(function() {
 
     //基础用法
-    $('#basics').DataTable();
+    $('#basics').DataTable({
+      "language": {       // https://datatables.net/reference/option/language
+        "decimal":        "",
+        "emptyTable":     "没有可用的数据",
+        "info":           "显示 _TOTAL_ 条 _START_ 至 _END_",
+        "infoEmpty":      "显示 0 条 0 至 0",
+        "infoFiltered":   "(从 _MAX_ 总条目中过滤)",
+        "infoPostFix":    "",
+        "thousands":      ",",
+        "lengthMenu":     "显示 _MENU_ 每页条数",
+        "loadingRecords": "加载中...",
+        "processing":     "处理中...",
+        "search":         "查询:",
+        "zeroRecords":    "未找到匹配的记录",
+        "paginate": {
+          "first":      "首页",
+          "last":       "尾页",
+          "next":       "下一页",
+          "previous":   "上一页"
+        },
+        "aria": {
+          "sortAscending":  ": 按升序对列进行排序",
+          "sortDescending": ": 按降序对列进行排序"
+        }
+      }
+    });
 
   });
 </script>
