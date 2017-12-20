@@ -88,8 +88,7 @@
             <div class="example-wrap">
               <div class="code-example-wrap">
                 <!--每个table-->
-                <div class="table">
-                  <table id="basics" class="display" cellspacing="0" width="100%">
+                <table id="basics" class="display" cellspacing="0" width="100%">
                     <thead>
                     <tr>
                       <th>姓名</th>
@@ -141,25 +140,325 @@
                       <td>2012/05/12</td>
                       <td>￥20,000</td>
                     </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
+                    <tr>
+                      <td>张三</td>
+                      <td>软件工程师</td>
+                      <td>北京</td>
+                      <td>33</td>
+                      <td>2012/05/12</td>
+                      <td>￥20,000</td>
+                    </tr>
                     </tbody>
                   </table>
-                </div>
               </div>
               <!--代码块-->
-              <div class="rx-relative code-block" date-time-1>
+              <div class="rx-relative code-block" data-table-1>
                 <!--复制icon-->
                 <a href="javascript:void(0)" class="copy"
                    data-clipboard-demo data-clipboard-action="copy"
-                   data-clipboard-target=".date-time-1">
+                   data-clipboard-target=".data-table-1">
                   <i class="icon iconfont icon-fuzhi"></i>
                 </a>
-                <pre class="rx-border-top"><code class="rx-clear-radius date-time-1 css html">
+                <pre class="rx-border-top"><code class="rx-clear-radius data-table-1 css html">
 //基础用法
-$('#basics').DataTable();
+$('#basics').DataTable({
+  "language": {
+    "decimal":        "",
+    "emptyTable":     "没有可用的数据",
+    "info":           "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
+    "infoEmpty":      "显示 0 至 0 条 , 共 0 条",
+    "infoFiltered":   "(从 _MAX_ 总条目中过滤)",
+    "infoPostFix":    "",
+    "thousands":      ",",
+    "lengthMenu":     "显示 _MENU_ 条",
+    "loadingRecords": "加载中...",
+    "processing":     "处理中...",
+    "search":         "",
+    "zeroRecords":    "未找到匹配的记录",
+    "paginate": {
+      "first":      "首页",
+      "last":       "尾页",
+      "next":       "&nbsp;",
+      "previous":   "&nbsp;"
+    },
+    "aria": {
+      "sortAscending":  ": 按升序对列进行排序",
+      "sortDescending": ": 按降序对列进行排序"
+    }
+  }
+});
                   </code></pre>
               </div>
               <!--按钮-->
-              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-1">
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="data-table-1">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--基础用法-紧凑-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>基础用法-紧凑</h2>
+        </div>
+        <!--每个条目 -- 基础用法 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <!--每个table-->
+                <table id="basics-compact" class="display compact" cellspacing="0" width="100%">
+                  <thead>
+                  <tr>
+                    <th>姓名</th>
+                    <th>职位</th>
+                    <th>地址</th>
+                    <th>年龄</th>
+                    <th>入职日期</th>
+                    <th>薪资</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>北京</td>
+                    <td>33</td>
+                    <td>2012/05/12</td>
+                    <td>￥20,000</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" data-table-2>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".data-table-2">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius data-table-2 css html">
+//基础用法-紧凑
+$('#basics-compact').DataTable({
+  "language": {
+    "decimal":        "",
+    "emptyTable":     "没有可用的数据",
+    "info":           "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
+    "infoEmpty":      "显示 0 至 0 条 , 共 0 条",
+    "infoFiltered":   "(从 _MAX_ 总条目中过滤)",
+    "infoPostFix":    "",
+    "thousands":      ",",
+    "lengthMenu":     "显示 _MENU_ 条",
+    "loadingRecords": "加载中...",
+    "processing":     "处理中...",
+    "search":         "",
+    "zeroRecords":    "未找到匹配的记录",
+    "paginate": {
+      "first":      "首页",
+      "last":       "尾页",
+      "next":       "&nbsp;",
+      "previous":   "&nbsp;"
+    },
+    "aria": {
+      "sortAscending":  ": 按升序对列进行排序",
+      "sortDescending": ": 按降序对列进行排序"
+    }
+  }
+});
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="data-table-2">
                 <span class="show">显示代码</span>
                 <span class="hide">隐藏代码</span>
               </a>
@@ -191,21 +490,50 @@ $('#basics').DataTable();
       "language": {       // https://datatables.net/reference/option/language
         "decimal":        "",
         "emptyTable":     "没有可用的数据",
-        "info":           "显示 _TOTAL_ 条 _START_ 至 _END_",
-        "infoEmpty":      "显示 0 条 0 至 0",
+        "info":           "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
+        "infoEmpty":      "显示 0 至 0 条 , 共 0 条",
         "infoFiltered":   "(从 _MAX_ 总条目中过滤)",
         "infoPostFix":    "",
         "thousands":      ",",
-        "lengthMenu":     "显示 _MENU_ 每页条数",
+        "lengthMenu":     "显示 _MENU_ 条",
         "loadingRecords": "加载中...",
         "processing":     "处理中...",
-        "search":         "查询:",
+        "search":         "",
         "zeroRecords":    "未找到匹配的记录",
         "paginate": {
           "first":      "首页",
           "last":       "尾页",
-          "next":       "下一页",
-          "previous":   "上一页"
+          "next":       "&nbsp;",
+          "previous":   "&nbsp;"
+        },
+        "aria": {
+          "sortAscending":  ": 按升序对列进行排序",
+          "sortDescending": ": 按降序对列进行排序"
+        }
+      }
+    });
+
+
+    //基础用法-紧凑
+    $('#basics-compact').DataTable({
+      "language": {       // https://datatables.net/reference/option/language
+        "decimal":        "",
+        "emptyTable":     "没有可用的数据",
+        "info":           "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
+        "infoEmpty":      "显示 0 至 0 条 , 共 0 条",
+        "infoFiltered":   "(从 _MAX_ 总条目中过滤)",
+        "infoPostFix":    "",
+        "thousands":      ",",
+        "lengthMenu":     "显示 _MENU_ 条",
+        "loadingRecords": "加载中...",
+        "processing":     "处理中...",
+        "search":         "",
+        "zeroRecords":    "未找到匹配的记录",
+        "paginate": {
+          "first":      "首页",
+          "last":       "尾页",
+          "next":       "&nbsp;",
+          "previous":   "&nbsp;"
         },
         "aria": {
           "sortAscending":  ": 按升序对列进行排序",
