@@ -466,6 +466,214 @@ $('#basics-compact').DataTable({
           </div>
         </div>
       </div>
+      <!--多级表头-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>多级表头</h2>
+        </div>
+        <!--每个条目 -- 基础用法 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <!--每个table-->
+                <table id="multistep-header" class="display" cellspacing="0" width="100%">
+                  <thead>
+                  <tr>
+                    <th rowspan="2">姓名</th>
+                    <th colspan="2">HR 信息</th>
+                    <th colspan="3">联系方式</th>
+                  </tr>
+                  <tr>
+                    <th>职位</th>
+                    <th>薪资</th>
+                    <th>地点</th>
+                    <th>分机号</th>
+                    <th>E-mail</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>北京</td>
+                    <td>5407</td>
+                    <td>kelly@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>上海</td>
+                    <td>5797</td>
+                    <td>greer@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>北京</td>
+                    <td>5407</td>
+                    <td>kelly@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>上海</td>
+                    <td>5797</td>
+                    <td>greer@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>北京</td>
+                    <td>5407</td>
+                    <td>kelly@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>上海</td>
+                    <td>5797</td>
+                    <td>greer@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>北京</td>
+                    <td>5407</td>
+                    <td>kelly@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>上海</td>
+                    <td>5797</td>
+                    <td>greer@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>北京</td>
+                    <td>5407</td>
+                    <td>kelly@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>上海</td>
+                    <td>5797</td>
+                    <td>greer@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>北京</td>
+                    <td>5407</td>
+                    <td>kelly@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>上海</td>
+                    <td>5797</td>
+                    <td>greer@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>北京</td>
+                    <td>5407</td>
+                    <td>kelly@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>上海</td>
+                    <td>5797</td>
+                    <td>greer@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>北京</td>
+                    <td>5407</td>
+                    <td>kelly@aigodata.com</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>软件工程师</td>
+                    <td>￥20,000</td>
+                    <td>上海</td>
+                    <td>5797</td>
+                    <td>greer@aigodata.com</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" data-table-3>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".data-table-3">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius data-table-3 css html">
+//多级表头
+$('#multistep-header').DataTable({
+  "language": {       // https://datatables.net/reference/option/language
+    "decimal":        "",
+    "emptyTable":     "没有可用的数据",
+    "info":           "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
+    "infoEmpty":      "显示 0 至 0 条 , 共 0 条",
+    "infoFiltered":   "(从 _MAX_ 总条目中过滤)",
+    "infoPostFix":    "",
+    "thousands":      ",",
+    "lengthMenu":     "显示 _MENU_ 条",
+    "loadingRecords": "加载中...",
+    "processing":     "处理中...",
+    "search":         "",
+    "zeroRecords":    "未找到匹配的记录",
+    "paginate": {
+      "first":      "首页",
+      "last":       "尾页",
+      "next":       "&nbsp;",
+      "previous":   "&nbsp;"
+    },
+    "aria": {
+      "sortAscending":  ": 按升序对列进行排序",
+      "sortDescending": ": 按降序对列进行排序"
+    }
+  }
+});
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="data-table-3">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -516,6 +724,35 @@ $('#basics-compact').DataTable({
 
     //基础用法-紧凑
     $('#basics-compact').DataTable({
+      "language": {       // https://datatables.net/reference/option/language
+        "decimal":        "",
+        "emptyTable":     "没有可用的数据",
+        "info":           "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
+        "infoEmpty":      "显示 0 至 0 条 , 共 0 条",
+        "infoFiltered":   "(从 _MAX_ 总条目中过滤)",
+        "infoPostFix":    "",
+        "thousands":      ",",
+        "lengthMenu":     "显示 _MENU_ 条",
+        "loadingRecords": "加载中...",
+        "processing":     "处理中...",
+        "search":         "",
+        "zeroRecords":    "未找到匹配的记录",
+        "paginate": {
+          "first":      "首页",
+          "last":       "尾页",
+          "next":       "&nbsp;",
+          "previous":   "&nbsp;"
+        },
+        "aria": {
+          "sortAscending":  ": 按升序对列进行排序",
+          "sortDescending": ": 按降序对列进行排序"
+        }
+      }
+    });
+
+
+    //多级表头
+    $('#multistep-header').DataTable({
       "language": {       // https://datatables.net/reference/option/language
         "decimal":        "",
         "emptyTable":     "没有可用的数据",
