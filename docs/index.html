@@ -692,15 +692,13 @@ $('#multistep-header').DataTable({
                 <table id="unfold-row" class="display" cellspacing="0" width="100%">
                   <thead>
                   <tr>
-                    <th>&nbsp;</th>
+                    <th></th>
                     <th>姓名</th>
                     <th>职位</th>
                     <th>地址</th>
                     <th>薪资</th>
                   </tr>
                   </thead>
-                  <tbody>
-                  </tbody>
                 </table>
               </div>
               <!--代码块-->
@@ -868,6 +866,7 @@ $('#multistep-header').DataTable({
       //从第二列开始排序
       "aaSorting": [[1, 'asc']],
 
+      //表格内容
       "data": [
         {
           "name": "张三",
@@ -1000,10 +999,33 @@ $('#multistep-header').DataTable({
       }
     });
 
+    //获取td的个数
+    var tdNum = $("#unfold-row tbody tr").eq(0).children().length;
+
+    //展开条目
+    $("#unfold-row tbody tr").after('<tr>' +
+      '<td>' +
+      '<ul class="item">' +
+      '<li>分机号码：5407</li>' +
+      '<li>E-mail：kelly@aigodata.com</li>' +
+      '</ul>' +
+      '</td>' +
+      '</tr>')
+      .next().hide().children().attr('colSpan',tdNum);
+
     // 监听展开
     $("#unfold-row").on('click', ".details-control", function(evt) {
        var td = $(this);
-       console.log(td);
+       var tr = td.parent();
+
+       tr.toggleClass('details');
+
+       if(tr.hasClass('details')){
+         tr.next().show();
+       }else {
+         tr.next().hide();
+       }
+
     });
 
   });

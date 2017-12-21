@@ -569,3 +569,20 @@ td.details-control:after{
   left: 50%;
   margin: -8px 0 0 -8px;
 }
+
+tr.details td.details-control:after{
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+td ul.item{
+  width: 50%;
+  padding-bottom: 10px;
+}
+
+td ul.item li{
+  line-height: 36px;
+  border-bottom: 1px solid #ebebeb;
+  padding-left: 12px;
+}
+
