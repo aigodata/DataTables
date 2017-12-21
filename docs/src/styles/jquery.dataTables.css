@@ -73,14 +73,12 @@ table.dataTable thead th:after{
 }
 
 table.dataTable thead .sorting:after{
-  content: "\e603";
+  content: "\e604";
 }
 
 table.dataTable thead .sorting_asc:after{
-  content: "\e603";
+  content: "\e602";
   color: #30a8ff;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 table.dataTable thead .sorting_desc:after{
