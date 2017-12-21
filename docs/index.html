@@ -638,7 +638,7 @@ $('#basics-compact').DataTable({
                 <pre class="rx-border-top"><code class="rx-clear-radius data-table-3 css html">
 //多级表头
 $('#multistep-header').DataTable({
-  "language": {       // https://datatables.net/reference/option/language
+  "language": {
     "decimal":        "",
     "emptyTable":     "没有可用的数据",
     "info":           "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
@@ -667,6 +667,81 @@ $('#multistep-header').DataTable({
               </div>
               <!--按钮-->
               <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="data-table-3">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--展开行-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>展开行</h2>
+        </div>
+        <!--每个条目 -- 基础用法 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <!--每个table-->
+                <table id="unfold-row" class="display" cellspacing="0" width="100%">
+                  <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>姓名</th>
+                    <th>职位</th>
+                    <th>地址</th>
+                    <th>薪资</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" data-table-4>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".data-table-4">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius data-table-4 css html">
+//多级表头
+$('#multistep-header').DataTable({
+  "language": {       // https://datatables.net/reference/option/language
+    "decimal":        "",
+    "emptyTable":     "没有可用的数据",
+    "info":           "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
+    "infoEmpty":      "显示 0 至 0 条 , 共 0 条",
+    "infoFiltered":   "(从 _MAX_ 总条目中过滤)",
+    "infoPostFix":    "",
+    "thousands":      ",",
+    "lengthMenu":     "显示 _MENU_ 条",
+    "loadingRecords": "加载中...",
+    "processing":     "处理中...",
+    "search":         "",
+    "zeroRecords":    "未找到匹配的记录",
+    "paginate": {
+      "first":      "首页",
+      "last":       "尾页",
+      "next":       "&nbsp;",
+      "previous":   "&nbsp;"
+    },
+    "aria": {
+      "sortAscending":  ": 按升序对列进行排序",
+      "sortDescending": ": 按降序对列进行排序"
+    }
+  }
+});
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="data-table-4">
                 <span class="show">显示代码</span>
                 <span class="hide">隐藏代码</span>
               </a>
@@ -774,6 +849,151 @@ $('#multistep-header').DataTable({
         },
         "aria": {
           "sortAscending":  ": 按升序对列进行排序",
+          "sortDescending": ": 按降序对列进行排序"
+        }
+      }
+    });
+
+
+    //展开行
+    $("#unfold-row").dataTable({
+
+      //设置第一列不排序
+      "aoColumnDefs": [{
+        "bSortable": false,
+        "aTargets": [0]
+      }],
+
+      //从第二列开始排序
+      "aaSorting": [[1, 'asc']],
+
+      "data": [
+      {
+        "name": "张三",
+        "position": "软件开发工程师",
+        "address": "北京",
+        "pay": "￥20,000"
+      },
+      {
+        "name": "李四",
+        "position": "软件测试工程师",
+        "address": "深圳",
+        "pay": "￥22,000"
+      },
+      {
+        "name": "张三",
+        "position": "软件开发工程师",
+        "address": "北京",
+        "pay": "￥28,000"
+      },
+      {
+        "name": "李四",
+        "position": "软件开发工程师",
+        "address": "杭州",
+        "pay": "￥36,000"
+      },
+      {
+        "name": "张三",
+        "position": "软件测试工程师",
+        "address": "杭州",
+        "pay": "￥22,000"
+      },
+      {
+        "name": "李四",
+        "position": "软件设计工程师",
+        "address": "北京",
+        "pay": "￥22,000"
+      },
+      {
+        "name": "张三",
+        "position": "软件开发工程师",
+        "address": "北京",
+        "pay": "￥18,000"
+      },
+      {
+        "name": "李四",
+        "position": "软件开发工程师",
+        "address": "杭州",
+        "pay": "￥30,000"
+      },
+      {
+        "name": "张三",
+        "position": "软件开发工程师",
+        "address": "深圳",
+        "pay": "￥18,000"
+      }
+      ,
+      {
+        "name": "张三",
+        "position": "软件开发工程师",
+        "address": "大连",
+        "pay": "￥18,000"
+      },
+      {
+        "name": "李四",
+        "position": "软件测试工程师",
+        "address": "长春",
+        "pay": "￥20,000"
+      },
+      {
+        "name": "张三",
+        "position": "软件设计工程师",
+        "address": "北京",
+        "pay": "￥23,000"
+      },
+      {
+        "name": "李四",
+        "position": "软件测试工程师",
+        "address": "深圳",
+        "pay": "￥22,000"
+      },
+      {
+        "name": "张三",
+        "position": "软件测试工程师",
+        "address": "北京",
+        "pay": "￥37,000"
+      },
+      {
+        "name": "张三",
+        "position": "软件开发工程师",
+        "address": "大连",
+        "pay": "￥32,000"
+      }],
+
+      "columns": [
+        {
+          "class":          "details-control",
+          "orderable":      false,
+          "data":           null,
+          "defaultContent": ""
+        },
+        { "data": "name" },
+        { "data": "position" },
+        { "data": "address" },
+        { "data": "pay" }
+      ],
+
+      "language": {       // https://datatables.net/reference/option/language
+        "decimal": "",
+        "emptyTable": "没有可用的数据",
+        "info": "显示 _START_ 至 _END_ 条 , 共 _TOTAL_ 条",
+        "infoEmpty": "显示 0 至 0 条 , 共 0 条",
+        "infoFiltered": "(从 _MAX_ 总条目中过滤)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "显示 _MENU_ 条",
+        "loadingRecords": "加载中...",
+        "processing": "处理中...",
+        "search": "",
+        "zeroRecords": "未找到匹配的记录",
+        "paginate": {
+          "first": "首页",
+          "last": "尾页",
+          "next": "&nbsp;",
+          "previous": "&nbsp;"
+        },
+        "aria": {
+          "sortAscending": ": 按升序对列进行排序",
           "sortDescending": ": 按降序对列进行排序"
         }
       }
