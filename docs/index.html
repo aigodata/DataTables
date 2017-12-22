@@ -818,7 +818,7 @@ $("#unfold-row").dataTable({
 
   "columns": [
     {
-      "class": "details-control",
+      "class": "detail-control",
       "orderable": false,
       "data": null,
       "defaultContent": ""
@@ -856,15 +856,21 @@ $("#unfold-row").dataTable({
 });
 
 // 监听展开
-$("#unfold-row").on('click', ".details-control", function (evt) {
+$("#unfold-row").on('click', function (evt) {
+  // 除了展开收齐图标, 其余的点击进行remove
+  if(!$(evt.target).hasClass("detail-control")) {
+    var tr = $(this).find('tr');
+    tr.removeClass('detail-bar');
+  }
+});
+$("#unfold-row").on('click', ".detail-control", function (evt) {
   var td = $(this);
   var tr = td.parent();
   var len = tr.children().length;
 
-  tr.toggleClass('details');
-
-  if (tr.hasClass('details')) {
-    tr.after('<tr class="add-tr">' +
+  tr.toggleClass('detail-bar');
+  if (tr.hasClass('detail-bar')) {
+    tr.after('<tr class="add-detail">' +
       '<td colspan="' + len + '">' +
       '<ul class="item">' +
       '<li>分机号码：5407</li>' +
@@ -873,9 +879,8 @@ $("#unfold-row").on('click', ".details-control", function (evt) {
       '</td>' +
       '</tr>');
   } else {
-    tr.next(".add-tr").remove();
+    tr.next(".add-detail").remove();
   }
-
 });
                   </code></pre>
               </div>
@@ -1102,7 +1107,7 @@ $("#unfold-row").on('click', ".details-control", function (evt) {
 
       "columns": [
         {
-          "class": "details-control",
+          "class": "detail-control",
           "orderable": false,
           "data": null,
           "defaultContent": ""
@@ -1140,15 +1145,21 @@ $("#unfold-row").on('click', ".details-control", function (evt) {
     });
 
     // 监听展开
-    $("#unfold-row").on('click', ".details-control", function (evt) {
+    $("#unfold-row").on('click', function (evt) {
+      // 除了展开收齐图标, 其余的点击进行remove
+      if(!$(evt.target).hasClass("detail-control")) {
+        var tr = $(this).find('tr');
+        tr.removeClass('detail-bar');
+      }
+    });
+    $("#unfold-row").on('click', ".detail-control", function (evt) {
       var td = $(this);
       var tr = td.parent();
       var len = tr.children().length;
 
-      tr.toggleClass('details');
-
-      if (tr.hasClass('details')) {
-        tr.after('<tr class="add-tr">' +
+      tr.toggleClass('detail-bar');
+      if (tr.hasClass('detail-bar')) {
+        tr.after('<tr class="add-detail">' +
           '<td colspan="' + len + '">' +
           '<ul class="item">' +
           '<li>分机号码：5407</li>' +
@@ -1157,9 +1168,8 @@ $("#unfold-row").on('click', ".details-control", function (evt) {
           '</td>' +
           '</tr>');
       } else {
-        tr.next(".add-tr").remove();
+        tr.next(".add-detail").remove();
       }
-
     });
 
   });
