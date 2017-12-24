@@ -1152,7 +1152,8 @@ $("#unfold-row").on('click', ".detail-control", function (evt) {
         tr.removeClass('detail-bar');
       }
     });
-    $("#unfold-row").on('click', ".detail-control", function (evt) {
+    
+    $("#unfold-row").on('click', "td.detail-control", function (evt) {
       var td = $(this);
       var tr = td.parent();
       var len = tr.children().length;
