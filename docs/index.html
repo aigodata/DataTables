@@ -687,7 +687,7 @@ $('#multistep-header').DataTable({
           <div class="rx-demo-layout">
             <!-- 示例代码 -->
             <div class="example-wrap">
-              <div class="code-example-wrap">
+              <div class="code-example-wrap" id="unfold-row-wrap">
                 <!-- 每个table -->
                 <table id="unfold-row" class="display" cellspacing="0" width="100%">
                   <thead>
@@ -856,7 +856,7 @@ $("#unfold-row").dataTable({
 });
 
 // 监听展开
-$("#unfold-row").on('click', function (evt) {
+$("#unfold-row-wrap").on('click', function (evt) {
   // 除了展开收齐图标, 其余的点击进行remove
   if(!$(evt.target).hasClass("detail-control")) {
     var tr = $(this).find('tr');
@@ -1145,7 +1145,7 @@ $("#unfold-row").on('click', ".detail-control", function (evt) {
     });
 
     // 监听展开
-    $("#unfold-row").on('click', function (evt) {
+    $("#unfold-row-wrap").on('click', function (evt) {
       // 除了展开收齐图标, 其余的点击进行remove
       if(!$(evt.target).hasClass("detail-control")) {
         var tr = $(this).find('tr');
